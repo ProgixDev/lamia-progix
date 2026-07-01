@@ -96,7 +96,7 @@ export function BodySections() {
           <SectionHeader
             num="03 — INVESTISSEMENT"
             title="Votre investissement"
-            lead="Décomposition transparente, poste par poste. Deux formules au choix — 5 000 € ou 6 000 € — réglées à 1 000 €/mois. Le tableau ci-dessous détaille la Formule Essentielle ; la Formule Premium porte le total à 6 000 € (campagnes entièrement gérées)."
+            lead="Décomposition transparente, poste par poste. Formule Essentielle à 5 000 € (forfait) ou Formule Premium à 6 000 € (réglée à 1 000 €/mois). Le tableau ci-dessous détaille la Formule Essentielle ; la Formule Premium porte le total à 6 000 € (campagnes entièrement gérées)."
           />
           <div className={styles.tableWrap}>
             <table className={styles.table}>
@@ -146,8 +146,9 @@ export function BodySections() {
               <div className={styles.totalEyebrow}>Investissement · selon la formule</div>
               <div className={styles.totalValue}>5 000 € – 6 000 €</div>
               <div className={styles.totalNote}>
-                Réglé à <Strong>1 000 € / mois</Strong> — 5 mensualités pour la Formule Essentielle
-                (5 000 €), 6 pour la Premium (6 000 €). Prix ferme, aucun coût caché.
+                <Strong>Formule Essentielle : 5 000 €</Strong> (forfait).{" "}
+                <Strong>Formule Premium : 6 000 €</Strong>, réglée à 1 000 €/mois. Prix ferme, aucun
+                coût caché.
               </div>
             </div>
           </div>
@@ -159,7 +160,7 @@ export function BodySections() {
               Le montant retenu (5 000 € ou 6 000 €) correspond au montant net à payer.
             </Strong>
           </InfoBox>
-          <SubHeading>Échéancier de paiement — mensuel</SubHeading>
+          <SubHeading>Échéancier de paiement — Formule Premium</SubHeading>
           <div className={styles.grid3} style={{ margin: "6px 0 16px" }}>
             {payments.map((p) => (
               <div key={p.pct} className={cn(styles.payCard, styles.lift)}>
@@ -171,11 +172,13 @@ export function BodySections() {
             ))}
           </div>
           <p style={{ fontSize: "13px", color: "var(--slate)", margin: 0, lineHeight: 1.6 }}>
-            Paiement de <Strong>1 000 €/mois</Strong> par <Strong>Stripe</Strong> ou{" "}
-            <Strong>virement bancaire</Strong>, en euros — 5 mensualités pour la Formule Essentielle
-            (5 000 €), 6 pour la Formule Premium (6 000 €). La livraison intervient dès ≈ 60 jours,
-            le paiement restant échelonné. Aucun travail de développement ne débute avant réception
-            du premier versement. La monétisation de l’Application repose sur un{" "}
+            La <Strong>Formule Premium (6 000 €)</Strong> est réglée à{" "}
+            <Strong>1 000 €/mois sur 6 mois</Strong> par <Strong>Stripe</Strong> ou{" "}
+            <Strong>virement bancaire</Strong>, en euros ; la{" "}
+            <Strong>Formule Essentielle (5 000 €)</Strong> est un forfait, selon les modalités
+            convenues à la signature. La livraison intervient dès ≈ 60 jours. Aucun travail de
+            développement ne débute avant réception du premier versement. La monétisation de
+            l’Application repose sur un{" "}
             <Strong>essai gratuit puis un abonnement à 4,99 €/mois</Strong>, modèle éprouvé sur ce
             type d’application.
           </p>
@@ -188,7 +191,7 @@ export function BodySections() {
           <SectionHeader
             num="04 — FORMULES"
             title="Deux formules, au choix"
-            lead="Deux formules au choix — 5 000 € ou 6 000 €, réglées à 1 000 €/mois. Le périmètre de développement est identique ; seul l’accompagnement marketing change : à vous d’exécuter avec notre méthode, ou à nous de tout piloter. Sélectionnez la formule qui vous convient — votre choix est reporté dans le bon de commande."
+            lead="Deux formules au choix — Essentielle à 5 000 € ou Premium à 6 000 € (réglée à 1 000 €/mois). Le périmètre de développement est identique ; seul l’accompagnement marketing change : à vous d’exécuter avec notre méthode, ou à nous de tout piloter. Sélectionnez la formule qui vous convient — votre choix est reporté dans le bon de commande."
           />
           <FormuleChoice />
           <SubHeading>Ce que comprend l’accompagnement (90 jours)</SubHeading>

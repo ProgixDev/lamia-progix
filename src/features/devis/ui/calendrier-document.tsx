@@ -28,7 +28,7 @@ const stats: ReadonlyArray<Stat> = [
   { n: "60", u: " jours", l: "du cadrage à la publication" },
   { n: "6", u: "", l: "sprints (Sprint 1 → 6)" },
   { n: "5", u: "", l: "phases avec validation client" },
-  { n: "1 000", u: " €/mois", l: "paiement échelonné (5 000 – 6 000 €)" },
+  { n: "5 000", u: " – 6 000 €", l: "selon la formule retenue" },
 ];
 
 const G_NV = "linear-gradient(90deg,var(--navy),var(--navy-700))";
@@ -269,7 +269,7 @@ const miles: ReadonlyArray<Mile> = [
   {
     pct: "MOIS 5–6 · 1 000 €/MOIS",
     nm: "Livraison & lancement",
-    when: "Recette et publication — 5ᵉ mensualité (Essentielle), 6ᵉ pour la Premium",
+    when: "Comptes, abonnement, recette et publication sur les stores",
     amt: "2 000 €",
     trig: "Solde final",
   },
@@ -920,7 +920,7 @@ export function CalendrierDocument() {
             <SectionHeader
               num="03 — JALONS"
               title="Jalons de paiement"
-              lead="Paiement échelonné de 1 000 €/mois, identique à l’échéancier du devis : 5 mensualités pour la Formule Essentielle (5 000 €), 6 pour la Formule Premium (6 000 €). La livraison intervient en environ 60 jours, tandis que le paiement reste mensuel."
+              lead="Échéancier de la Formule Premium (6 000 €), réglée à 1 000 €/mois sur 6 mois — identique au devis. La Formule Essentielle (5 000 €) est un forfait, selon les modalités convenues à la signature. La livraison intervient en environ 60 jours."
             />
             <div
               style={{
@@ -1049,10 +1049,11 @@ export function CalendrierDocument() {
                     lineHeight: 1.55,
                   }}
                 >
-                  Formule Essentielle à 5 000 € (5 mensualités) ou Formule Premium à 6 000 € (6
-                  mensualités), réglées à 1 000 €/mois. Paiements par Stripe ou virement bancaire,
-                  en euros. Aucune taxe applicable (prestataire canadien / client français). Aucun
-                  travail de développement ne débute avant réception de la première mensualité.
+                  Formule Premium : 6 000 €, réglée à 1 000 €/mois (6 mensualités). Formule
+                  Essentielle : 5 000 €, forfait selon les modalités convenues à la signature.
+                  Paiements par Stripe ou virement bancaire, en euros. Aucune taxe applicable
+                  (prestataire canadien / client français). Aucun travail de développement ne débute
+                  avant réception du premier versement.
                 </p>
               </div>
             </div>

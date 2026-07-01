@@ -104,8 +104,8 @@ export const investment = [
   },
 ] as const;
 
-/** Section 03 — payment schedule. Paid monthly at 1 000 €/mois : 5 mensualités
- * pour la Formule Essentielle (5 000 €), 6 pour la Formule Premium (6 000 €). */
+/** Section 03 — échéancier de la Formule Premium : 1 000 €/mois × 6 (6 000 €).
+ * La Formule Essentielle (5 000 €) est un forfait, hors paiement mensuel. */
 export const payments = [
   {
     pct: "MOIS 1",
@@ -128,22 +128,17 @@ export const payments = [
   { pct: "MOIS 4", when: "Développement", desc: "Back-office & intégrations", amount: "1 000 €" },
   {
     pct: "MOIS 5",
-    when: "Recette & lancement",
-    desc: "Dernière mensualité · Formule Essentielle",
+    when: "Recette & publication",
+    desc: "Tests, stores, mise en ligne",
     amount: "1 000 €",
   },
-  {
-    pct: "MOIS 6",
-    when: "Formule Premium",
-    desc: "6ᵉ mensualité · Formule Premium",
-    amount: "1 000 €",
-  },
+  { pct: "MOIS 6", when: "Lancement", desc: "Mise en marché & accompagnement", amount: "1 000 €" },
 ] as const;
 
-/** Section 04 — les deux formules proposées au Client, réglées à 1 000 €/mois :
- * Essentielle 5 000 € (marketing guidé) ou Premium 6 000 € (marketing géré). Le
- * périmètre de développement est identique ; seul l’accompagnement marketing
- * change. La cliente choisit une formule, puis signe. */
+/** Section 04 — les deux formules proposées au Client : Essentielle 5 000 €
+ * (forfait, marketing guidé) ou Premium 6 000 € réglée à 1 000 €/mois (marketing
+ * entièrement géré). Le périmètre de développement est identique ; seul
+ * l’accompagnement marketing change. La cliente choisit une formule, puis signe. */
 export const formules = [
   {
     key: "essentielle",
@@ -153,7 +148,7 @@ export const formules = [
       "Tout le développement, plus un accompagnement marketing guidé — vous exécutez, Progix vous guide.",
     price: "5 000 €",
     priceUnit: "",
-    priceNote: "tout compris · 1 000 €/mois × 5",
+    priceNote: "forfait unique, tout compris",
     points: [
       { b: "Application, cartographie, back-office, site vitrine", t: " & déploiement complet" },
       { b: "Accompagnement marketing Offre n°1", t: " — inclus pendant 90 jours" },
