@@ -13,7 +13,7 @@ export const cover = {
   subtitle:
     "Application mobile qui aide les parents à localiser les lieux adaptés aux enfants — parcs, aires de jeux, espaces verts et zones familiales — partout en Île-de-France. Cartographie, recherche et filtres, fiches de lieux, plus back-office, site vitrine et accompagnement marketing jusqu’à la mise en marché. Un prix fixe, une équipe senior, votre propriété à 100 %.",
   badges: [
-    { l: "Développement", v: "4 800 €", u: "" },
+    { l: "Investissement", v: "5 000 – 6 000 €", u: "" },
     { l: "Délai de livraison", v: "60", u: " jours" },
     { l: "Accompagnement", v: "90", u: " jours" },
   ],
@@ -72,12 +72,13 @@ export const incl3 = [
 ] as const;
 
 /** Section 03 — investment table, poste par poste. `alt` rows get the tinted
- * background; the priced lines sum to the 4 800 € development forfait. */
+ * background; the priced lines sum to the 5 000 € Formule Essentielle (la
+ * Formule Premium porte le total à 6 000 €, marketing entièrement géré). */
 export const investment = [
   {
     strong: "Application mobile iOS + Android",
     text: " (design sur mesure)",
-    amount: "1 600 €",
+    amount: "1 700 €",
     alt: false,
   },
   {
@@ -86,13 +87,13 @@ export const investment = [
     alt: true,
   },
   { text: "Cartographie, géolocalisation & filtres des lieux", amount: "750 €", alt: false },
-  { text: "Back-office d’administration & modération", amount: "600 €", alt: true },
+  { text: "Back-office d’administration & modération", amount: "650 €", alt: true },
   { text: "Landing page / site vitrine", amount: "250 €", alt: false },
   { text: "API & infrastructure cloud scalable", amount: "500 €", alt: true },
   { text: "Déploiement App Store + Play Store", amount: "150 €", alt: false },
   {
     text: "Accompagnement marketing 90 j (Offre n°1 — formation, scripts, suivi)",
-    amount: "350 €",
+    amount: "400 €",
     alt: true,
   },
   {
@@ -103,29 +104,45 @@ export const investment = [
   },
 ] as const;
 
-/** Section 03 — payment schedule. Development is paid monthly over six months
- * (800 €/mois), even si la livraison intervient plus tôt (≈ 60 jours). */
+/** Section 03 — payment schedule. Paid monthly at 1 000 €/mois : 5 mensualités
+ * pour la Formule Essentielle (5 000 €), 6 pour la Formule Premium (6 000 €). */
 export const payments = [
-  { pct: "MOIS 1", when: "Au démarrage", desc: "Signature + réunion de cadrage", amount: "800 €" },
+  {
+    pct: "MOIS 1",
+    when: "Au démarrage",
+    desc: "Signature + réunion de cadrage",
+    amount: "1 000 €",
+  },
   {
     pct: "MOIS 2",
     when: "Cadrage & design",
     desc: "Recherche des données, maquettes",
-    amount: "800 €",
+    amount: "1 000 €",
   },
-  { pct: "MOIS 3", when: "Développement", desc: "Cartographie & fonctionnalités", amount: "800 €" },
-  { pct: "MOIS 4", when: "Développement", desc: "Back-office & intégrations", amount: "800 €" },
+  {
+    pct: "MOIS 3",
+    when: "Développement",
+    desc: "Cartographie & fonctionnalités",
+    amount: "1 000 €",
+  },
+  { pct: "MOIS 4", when: "Développement", desc: "Back-office & intégrations", amount: "1 000 €" },
   {
     pct: "MOIS 5",
-    when: "Recette & publication",
-    desc: "Tests, stores, mise en ligne",
-    amount: "800 €",
+    when: "Recette & lancement",
+    desc: "Dernière mensualité · Formule Essentielle",
+    amount: "1 000 €",
   },
-  { pct: "MOIS 6", when: "Lancement", desc: "À l’issue de l’accompagnement", amount: "800 €" },
+  {
+    pct: "MOIS 6",
+    when: "Formule Premium",
+    desc: "6ᵉ mensualité · Formule Premium",
+    amount: "1 000 €",
+  },
 ] as const;
 
-/** Section 04 — les deux formules d’accompagnement proposées au Client. Le
- * développement (4 800 €) est identique ; seul l’accompagnement marketing
+/** Section 04 — les deux formules proposées au Client, réglées à 1 000 €/mois :
+ * Essentielle 5 000 € (marketing guidé) ou Premium 6 000 € (marketing géré). Le
+ * périmètre de développement est identique ; seul l’accompagnement marketing
  * change. La cliente choisit une formule, puis signe. */
 export const formules = [
   {
@@ -134,9 +151,9 @@ export const formules = [
     badge: "Accompagnement inclus",
     tagline:
       "Tout le développement, plus un accompagnement marketing guidé — vous exécutez, Progix vous guide.",
-    price: "4 800 €",
+    price: "5 000 €",
     priceUnit: "",
-    priceNote: "forfait unique, tout compris",
+    priceNote: "tout compris · 1 000 €/mois × 5",
     points: [
       { b: "Application, cartographie, back-office, site vitrine", t: " & déploiement complet" },
       { b: "Accompagnement marketing Offre n°1", t: " — inclus pendant 90 jours" },
@@ -152,9 +169,9 @@ export const formules = [
     name: "Formule Premium — clé en main",
     badge: "Gestion complète",
     tagline: "Tout le développement, et Progix pilote entièrement vos campagnes publicitaires.",
-    price: "4 800 € + 1 000 €",
-    priceUnit: " / mois",
-    priceNote: "développement + gestion marketing sur 90 jours (soit 3 000 €)",
+    price: "6 000 €",
+    priceUnit: "",
+    priceNote: "tout compris · 1 000 €/mois × 6",
     points: [
       { b: "Tout le périmètre de la Formule Essentielle", t: "" },
       { b: "Création des vidéos UGC, visuels & publicités", t: " par Progix" },

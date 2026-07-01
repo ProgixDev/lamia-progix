@@ -10,8 +10,8 @@ const KEY = "progix.devis.v1";
 const FIELD_IDS = ["cli_nom", "cli_societe", "cli_titre", "cli_date", "cli_courriel"] as const;
 
 const FORMULE_LABELS: Record<string, string> = {
-  essentielle: "Formule Essentielle — 4 800 €",
-  premium: "Formule Premium (clé en main) — 4 800 € + 1 000 €/mois",
+  essentielle: "Formule Essentielle — 5 000 €",
+  premium: "Formule Premium (clé en main) — 6 000 €",
 };
 
 function readStore(): Record<string, string> {

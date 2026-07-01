@@ -29,9 +29,9 @@ function CheckList({ items }: { items: ReadonlyArray<{ b: string; t: string }> }
 
 /** Illustrative delay-compensation rows: retard → part du délai → montant. */
 const delayRows = [
-  { d: "5 jours", frac: "1 / 12", amount: "400 €" },
-  { d: "10 jours", frac: "1 / 6", amount: "800 €" },
-  { d: "20 jours", frac: "1 / 3", amount: "1 600 €" },
+  { d: "5 jours", frac: "1 / 12", amount: "417 €" },
+  { d: "10 jours", frac: "1 / 6", amount: "833 €" },
+  { d: "20 jours", frac: "1 / 3", amount: "1 667 €" },
 ] as const;
 
 /** Sections 01–08 of the devis (section 09, the signature block, is separate). */
@@ -96,7 +96,7 @@ export function BodySections() {
           <SectionHeader
             num="03 — INVESTISSEMENT"
             title="Votre investissement"
-            lead="Décomposition transparente du développement, poste par poste. Un forfait fixe de 4 800 €, réglé mensuellement, tout compris jusqu’à la mise en marché."
+            lead="Décomposition transparente, poste par poste. Deux formules au choix — 5 000 € ou 6 000 € — réglées à 1 000 €/mois. Le tableau ci-dessous détaille la Formule Essentielle ; la Formule Premium porte le total à 6 000 € (campagnes entièrement gérées)."
           />
           <div className={styles.tableWrap}>
             <table className={styles.table}>
@@ -131,9 +131,9 @@ export function BodySections() {
                 ))}
                 <tr className={styles.tableTotal}>
                   <td>
-                    <strong>Développement — forfait, tout compris</strong>
+                    <strong>Formule Essentielle — tout compris</strong>
                   </td>
-                  <td className={styles.tableTotalAmount}>4 800 €</td>
+                  <td className={styles.tableTotalAmount}>5 000 €</td>
                 </tr>
               </tbody>
             </table>
@@ -143,11 +143,11 @@ export function BodySections() {
               <span className={styles.totalArrow} aria-hidden="true">
                 —
               </span>
-              <div className={styles.totalEyebrow}>Développement · forfait fixe</div>
-              <div className={styles.totalValue}>4 800 €</div>
+              <div className={styles.totalEyebrow}>Investissement · selon la formule</div>
+              <div className={styles.totalValue}>5 000 € – 6 000 €</div>
               <div className={styles.totalNote}>
-                Soit <Strong>800 € / mois pendant 6 mois</Strong>. Prix ferme, tout compris jusqu’à
-                la mise en marché. Aucun coût caché.
+                Réglé à <Strong>1 000 € / mois</Strong> — 5 mensualités pour la Formule Essentielle
+                (5 000 €), 6 pour la Premium (6 000 €). Prix ferme, aucun coût caché.
               </div>
             </div>
           </div>
@@ -155,7 +155,9 @@ export function BodySections() {
             Progix étant une entreprise <Strong>canadienne</Strong> et la Cliente étant établie en{" "}
             <Strong>France</Strong>, la prestation n’est pas assujettie à la TVA ni à aucune taxe de
             vente (service transfrontalier — autoliquidation par le preneur le cas échéant).{" "}
-            <Strong>Le montant de 4 800 € correspond au montant net à payer.</Strong>
+            <Strong>
+              Le montant retenu (5 000 € ou 6 000 €) correspond au montant net à payer.
+            </Strong>
           </InfoBox>
           <SubHeading>Échéancier de paiement — mensuel</SubHeading>
           <div className={styles.grid3} style={{ margin: "6px 0 16px" }}>
@@ -169,8 +171,9 @@ export function BodySections() {
             ))}
           </div>
           <p style={{ fontSize: "13px", color: "var(--slate)", margin: 0, lineHeight: 1.6 }}>
-            Paiement mensuel de <Strong>800 € sur 6 mois</Strong> par <Strong>Stripe</Strong> ou{" "}
-            <Strong>virement bancaire</Strong>, en euros — la livraison intervient dès ≈ 60 jours,
+            Paiement de <Strong>1 000 €/mois</Strong> par <Strong>Stripe</Strong> ou{" "}
+            <Strong>virement bancaire</Strong>, en euros — 5 mensualités pour la Formule Essentielle
+            (5 000 €), 6 pour la Formule Premium (6 000 €). La livraison intervient dès ≈ 60 jours,
             le paiement restant échelonné. Aucun travail de développement ne débute avant réception
             du premier versement. La monétisation de l’Application repose sur un{" "}
             <Strong>essai gratuit puis un abonnement à 4,99 €/mois</Strong>, modèle éprouvé sur ce
@@ -185,7 +188,7 @@ export function BodySections() {
           <SectionHeader
             num="04 — FORMULES"
             title="Deux formules, au choix"
-            lead="Le développement est identique dans les deux cas (4 800 €). Seul l’accompagnement marketing change : à vous d’exécuter avec notre méthode, ou à nous de tout piloter. Sélectionnez la formule qui vous convient — votre choix est reporté dans le bon de commande."
+            lead="Deux formules au choix — 5 000 € ou 6 000 €, réglées à 1 000 €/mois. Le périmètre de développement est identique ; seul l’accompagnement marketing change : à vous d’exécuter avec notre méthode, ou à nous de tout piloter. Sélectionnez la formule qui vous convient — votre choix est reporté dans le bon de commande."
           />
           <FormuleChoice />
           <SubHeading>Ce que comprend l’accompagnement (90 jours)</SubHeading>
@@ -339,10 +342,10 @@ export function BodySections() {
           <p className={styles.p}>
             En cas de retard de livraison <Strong>imputable au Prestataire</Strong>, la Cliente
             bénéficie d’une compensation financière <Strong>proportionnelle</Strong> à la durée du
-            retard, calculée sur le montant du développement (4 800 €). La compensation correspond à
-            la part du délai dépassée : <Strong>(jours de retard ÷ 60) × 4 800 €</Strong>. Ainsi, 10
-            jours de retard sur un engagement de 60 jours équivalent à 1/6 du délai, soit une
-            compensation de 800 €.
+            retard, calculée sur le montant de la formule retenue. La compensation correspond à la
+            part du délai dépassée : <Strong>(jours de retard ÷ 60) × le montant retenu</Strong>.
+            Ainsi, sur la Formule Essentielle (5 000 €), 10 jours de retard équivalent à 1/6 du
+            délai, soit une compensation de 833 €.
           </p>
           <div className={styles.tableWrap}>
             <table className={styles.table}>
@@ -350,7 +353,7 @@ export function BodySections() {
                 <tr>
                   <th>Retard imputable à Progix</th>
                   <th className={styles.thRight}>Part du délai (/60 j)</th>
-                  <th className={styles.thRight}>Compensation</th>
+                  <th className={styles.thRight}>Compensation (sur 5 000 €)</th>
                 </tr>
               </thead>
               <tbody>
