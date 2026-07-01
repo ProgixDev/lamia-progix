@@ -1,4 +1,4 @@
-﻿/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 import type { ReactNode } from "react";
 import { SmoothScroll } from "./smooth-scroll";
 import { CinematicHeader } from "./cinematic-header";
@@ -120,10 +120,10 @@ const leaders: ReadonlyArray<Leader> = [
 type Extra = { label: string; name: string; desc: string; img?: string };
 const extras: ReadonlyArray<Extra> = [
   {
-    label: "Consultant",
+    label: "Responsable des ventes",
     name: "Aurelio Gustave",
     img: "/team/aurelio.jpg",
-    desc: "Conseil stratÃ©gique et pilotage de projets complexes.",
+    desc: "Développement commercial et relation client.",
   },
   {
     label: "Marketing",
